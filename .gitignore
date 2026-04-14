@@ -1,0 +1,16 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Old asset subdirectories (root-level styles.css and main.js are used instead)
+CSS/
+JS/
+
+# Netlify
+.netlify/
+
+# Editor
+.vscode/
+*.swp
+*.swo
