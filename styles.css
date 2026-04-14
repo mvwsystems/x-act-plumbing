@@ -828,6 +828,16 @@ section { position: relative; }
   color: rgba(0,0,0,0.65);
 }
 
+/* ── About Page: Mission Grid ── */
+.mission-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  margin-top: 4rem;
+}
+
 .about-content .section-header { margin-bottom: 2rem; }
 
 .about-body {
@@ -1727,6 +1737,8 @@ section { position: relative; }
   .trust-divider { display: none; }
 
   .footer-bottom { flex-direction: column; text-align: center; }
+
+  .mission-grid { grid-template-columns: 1fr; }
 
   .service-detail-grid,
   .service-detail-grid.reverse { grid-template-columns: 1fr; gap: 2rem; }
