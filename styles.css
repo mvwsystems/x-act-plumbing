@@ -563,13 +563,23 @@ section { position: relative; }
   font-size: 2.8rem;
   font-weight: 900;
   color: var(--white);
+  background: linear-gradient(135deg, var(--white) 55%, var(--white-dim) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   line-height: 1;
   display: flex;
   align-items: baseline;
   gap: 0.15rem;
 }
 
-.hero-stat-num .accent { color: var(--red); font-size: 1.8rem; }
+.hero-stat-num .accent {
+  background: linear-gradient(135deg, var(--red) 0%, #e83530 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 1.8rem;
+}
 
 .hero-stat-label {
   font-family: var(--font-mono);
@@ -1467,6 +1477,274 @@ section { position: relative; }
   width: 18px;
   height: 18px;
   flex-shrink: 0;
+}
+
+/* ── Luxury / Avant-Garde Enhancements ── */
+
+/* Text selection brand color */
+::selection {
+  background: var(--red);
+  color: #fff;
+}
+::-moz-selection {
+  background: var(--red);
+  color: #fff;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--black); }
+::-webkit-scrollbar-thumb { background: var(--red); border-radius: 0; }
+::-webkit-scrollbar-thumb:hover { background: #cc3330; }
+
+/* 2px brand bar pinned to the very top */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--red) 0%, #e83530 50%, var(--red) 100%);
+  z-index: 9999;
+  pointer-events: none;
+}
+
+/* ── Credential Ticker Strip ── */
+.ticker {
+  background: var(--dark-2);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 0.85rem 0;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.ticker::before,
+.ticker::after {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 0;
+  width: 80px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.ticker::before {
+  left: 0;
+  background: linear-gradient(90deg, var(--dark-2), transparent);
+}
+
+.ticker::after {
+  right: 0;
+  background: linear-gradient(270deg, var(--dark-2), transparent);
+}
+
+.ticker-track {
+  display: flex;
+  width: max-content;
+  animation: ticker 32s linear infinite;
+}
+
+.ticker-track:hover { animation-play-state: paused; }
+
+.ticker-item {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0 2.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--white-dim);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.ticker-item strong {
+  color: var(--white);
+  font-weight: 500;
+}
+
+.ticker-dot {
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  background: var(--red);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* ── Corner bracket decorators ── */
+.service-card::after {
+  content: '';
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  width: 18px;
+  height: 18px;
+  border-right: 1px solid var(--border-red);
+  border-bottom: 1px solid var(--border-red);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.service-card:hover::after { opacity: 1; }
+
+.testimonial-card::before {
+  content: '';
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  width: 16px;
+  height: 16px;
+  border-top: 1px solid var(--border-red);
+  border-left: 1px solid var(--border-red);
+  pointer-events: none;
+}
+
+.testimonial-card::after {
+  content: '';
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  width: 16px;
+  height: 16px;
+  border-bottom: 1px solid var(--border-red);
+  border-right: 1px solid var(--border-red);
+  pointer-events: none;
+}
+
+.form-wrap {
+  position: relative;
+}
+
+.form-wrap::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 28px;
+  height: 28px;
+  border-top: 2px solid var(--red);
+  border-left: 2px solid var(--red);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.form-wrap::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  right: -1px;
+  width: 28px;
+  height: 28px;
+  border-bottom: 2px solid var(--red);
+  border-right: 2px solid var(--red);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ── Ghost watermark text on dark sections ── */
+.services-section::before {
+  content: '//';
+  position: absolute;
+  right: -1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: var(--font-display);
+  font-size: clamp(12rem, 22vw, 22rem);
+  font-weight: 900;
+  color: rgba(255,255,255,0.018);
+  line-height: 1;
+  pointer-events: none;
+  z-index: 0;
+  letter-spacing: -0.05em;
+  user-select: none;
+}
+
+.testimonials-section::before {
+  content: '//';
+  position: absolute;
+  left: -1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: var(--font-display);
+  font-size: clamp(12rem, 22vw, 22rem);
+  font-weight: 900;
+  color: rgba(255,255,255,0.018);
+  line-height: 1;
+  pointer-events: none;
+  z-index: 0;
+  letter-spacing: -0.05em;
+  user-select: none;
+}
+
+/* ── Angled section divider strip ── */
+
+/* ── Angled section divider strip ── */
+.section-rule {
+  display: block;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--red) 30%, var(--border) 70%, transparent);
+}
+
+/* ── Stat item accent on hover ── */
+.stat-item {
+  transition: background 0.3s ease;
+}
+
+.stat-item:hover {
+  background: var(--dark-3);
+}
+
+.stat-item::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--red), transparent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s var(--ease-out);
+}
+
+.stat-item:hover::before { transform: scaleX(1); }
+
+/* ── Nav logo text refined tracking ── */
+.nav-logo-text {
+  letter-spacing: 0.1em;
+}
+
+/* ── Page hero diagonal accent ── */
+.page-hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 180px;
+  height: 180px;
+  border-right: 1px solid var(--border-red);
+  border-bottom: 1px solid var(--border-red);
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+/* ── Footer brand rule ── */
+.footer-brand::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: var(--red);
+  margin-top: 1rem;
 }
 
 /* ── Animations ── */
