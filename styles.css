@@ -317,8 +317,8 @@ section { position: relative; }
 
 .btn-primary:hover {
   background: #cc3330;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 32px var(--red-glow);
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 12px 40px var(--red-glow), 0 4px 12px rgba(0,0,0,0.4);
 }
 
 .btn-outline {
@@ -331,7 +331,8 @@ section { position: relative; }
 .btn-outline:hover {
   border-color: var(--red);
   color: var(--red);
-  transform: translateY(-2px);
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 8px 32px rgba(180,40,36,0.2), 0 0 0 1px var(--border-red);
 }
 
 .btn-arrow {
@@ -346,7 +347,7 @@ section { position: relative; }
   transition: gap 0.25s ease;
 }
 
-.btn-arrow:hover { gap: 0.85rem; }
+.btn-arrow:hover { gap: 1.1rem; }
 
 .btn-arrow svg {
   width: 14px;
@@ -354,7 +355,7 @@ section { position: relative; }
   transition: transform 0.25s ease;
 }
 
-.btn-arrow:hover svg { transform: translateX(3px); }
+.btn-arrow:hover svg { transform: translateX(6px); }
 
 /* ── Section Headers ── */
 .section-header {
@@ -677,7 +678,7 @@ section { position: relative; }
   padding: 2.5rem;
   position: relative;
   overflow: hidden;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, transform 0.35s var(--ease-out), box-shadow 0.35s ease;
   cursor: default;
 }
 
@@ -692,7 +693,11 @@ section { position: relative; }
   transition: transform 0.4s var(--ease-out);
 }
 
-.service-card:hover { background: var(--dark-2); }
+.service-card:hover {
+  background: var(--dark-2);
+  transform: translateY(-6px);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.5), 0 0 0 1px var(--border-red);
+}
 .service-card:hover::before { transform: scaleX(1); }
 
 .service-card-num {
@@ -713,12 +718,23 @@ section { position: relative; }
   align-items: center;
   justify-content: center;
   margin-bottom: 1.5rem;
+  transition: background 0.3s ease, transform 0.35s var(--ease-out);
+}
+
+.service-card:hover .service-card-icon {
+  background: rgba(180,40,36,0.2);
+  transform: scale(1.12) rotate(-4deg);
 }
 
 .service-card-icon svg {
   width: 24px;
   height: 24px;
   color: var(--red);
+  transition: transform 0.35s var(--ease-out);
+}
+
+.service-card:hover .service-card-icon svg {
+  transform: scale(1.1);
 }
 
 .service-card-title {
@@ -956,12 +972,13 @@ section { position: relative; }
   border: 1px solid var(--border);
   padding: 2.5rem;
   position: relative;
-  transition: border-color 0.3s ease, transform 0.3s ease;
+  transition: border-color 0.35s ease, transform 0.35s var(--ease-out), box-shadow 0.35s ease;
 }
 
 .testimonial-card:hover {
   border-color: var(--border-red);
-  transform: translateY(-4px);
+  transform: translateY(-10px) scale(1.015);
+  box-shadow: 0 24px 64px rgba(0,0,0,0.55), 0 0 0 1px var(--border-red);
 }
 
 .testimonial-stars {
@@ -1224,10 +1241,14 @@ section { position: relative; }
   padding: 1.25rem;
   background: var(--dark-2);
   border: 1px solid var(--border);
-  transition: border-color 0.3s ease;
+  transition: border-color 0.3s ease, transform 0.35s var(--ease-out), box-shadow 0.35s ease;
 }
 
-.contact-info-item:hover { border-color: var(--border-red); }
+.contact-info-item:hover {
+  border-color: var(--border-red);
+  transform: translateX(5px);
+  box-shadow: -4px 0 20px rgba(180,40,36,0.12);
+}
 
 .contact-info-icon {
   width: 40px;
@@ -1599,16 +1620,20 @@ body::before {
   position: absolute;
   bottom: 1rem;
   right: 1rem;
-  width: 18px;
-  height: 18px;
+  width: 22px;
+  height: 22px;
   border-right: 1px solid var(--border-red);
   border-bottom: 1px solid var(--border-red);
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transform: translate(4px, 4px);
+  transition: opacity 0.3s ease, transform 0.35s var(--ease-out);
   pointer-events: none;
 }
 
-.service-card:hover::after { opacity: 1; }
+.service-card:hover::after {
+  opacity: 1;
+  transform: translate(0, 0);
+}
 
 .testimonial-card::before {
   content: '';
@@ -1710,11 +1735,13 @@ body::before {
 
 /* ── Stat item accent on hover ── */
 .stat-item {
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, transform 0.35s var(--ease-out), box-shadow 0.35s ease;
 }
 
 .stat-item:hover {
   background: var(--dark-3);
+  transform: translateY(-5px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.4);
 }
 
 .stat-item::before {
