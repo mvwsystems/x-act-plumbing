@@ -298,12 +298,20 @@
                   <input type="text" id="notes" name="notes" placeholder="Locked gate, dogs on property, etc.">
                 </div>
 
-                <!-- SMS Consent -->
-                <div style="padding:1rem;background:var(--dark-3);border:1px solid var(--border);margin:1.25rem 0;">
-                  <label style="display:flex;align-items:flex-start;gap:.75rem;cursor:pointer;font-family:var(--font-body);font-size:.8rem;color:var(--white-dim);line-height:1.5;text-transform:none;letter-spacing:0;">
-                    <input type="checkbox" name="sms_consent" value="yes" style="width:16px;height:16px;margin-top:2px;flex-shrink:0;accent-color:var(--red);">
-                    I consent to receive service-related text messages from X-Act Plumbing regarding my plumbing service request, including appointment confirmations, reminders, and technician updates. Message &amp; data rates may apply. Reply STOP to opt out.
-                  </label>
+                <!-- SMS Consent Checkboxes -->
+                <div style="display:flex;flex-direction:column;gap:.75rem;margin:1.25rem 0;">
+                  <div style="padding:1rem;background:var(--dark-3);border:1px solid var(--border);">
+                    <label style="display:flex;align-items:flex-start;gap:.75rem;cursor:pointer;font-family:var(--font-body);font-size:.8rem;color:var(--white-dim);line-height:1.6;text-transform:none;letter-spacing:0;">
+                      <input type="checkbox" name="sms_consent_service" value="yes" style="width:16px;height:16px;margin-top:3px;flex-shrink:0;accent-color:var(--red);">
+                      By checking this box, I consent to receive service-related text messages from X-Act Plumbing regarding my plumbing service request, including appointment confirmations, appointment reminders, technician arrival updates, and service notifications. Message frequency varies. Message and data rates may apply. Text HELP for assistance or reply STOP to opt out.
+                    </label>
+                  </div>
+                  <div style="padding:1rem;background:var(--dark-3);border:1px solid var(--border);">
+                    <label style="display:flex;align-items:flex-start;gap:.75rem;cursor:pointer;font-family:var(--font-body);font-size:.8rem;color:var(--white-dim);line-height:1.6;text-transform:none;letter-spacing:0;">
+                      <input type="checkbox" name="sms_consent_promo" value="yes" style="width:16px;height:16px;margin-top:3px;flex-shrink:0;accent-color:var(--red);">
+                      By checking this box, I consent to receive occasional promotional text messages from X-Act Plumbing, including special offers or seasonal service reminders. Message frequency varies. Message and data rates may apply. Consent is not required to receive services. Text HELP for assistance or reply STOP to opt out.
+                    </label>
+                  </div>
                 </div>
 
                 <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;padding:1rem;">
