@@ -809,6 +809,7 @@ section { position: relative; }
   width: 100%;
   aspect-ratio: 4/5;
   object-fit: cover;
+  object-position: center center;
   display: block;
   filter: grayscale(20%);
 }
@@ -1002,6 +1003,16 @@ section { position: relative; }
   font-size: 0.9rem;
   font-weight: 700;
   color: var(--red);
+  flex-shrink: 0;
+}
+
+.testimonial-author-photo {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  border: 2px solid var(--border-red);
   flex-shrink: 0;
 }
 
