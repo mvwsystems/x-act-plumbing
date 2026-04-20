@@ -790,7 +790,8 @@ section { position: relative; }
   position: absolute;
   top: -1px; left: -1px;
   right: 60px; bottom: 60px;
-  border: 1px solid var(--border-red);
+  border-top: 1px solid var(--border-red);
+  border-left: 1px solid var(--border-red);
   z-index: 1;
   pointer-events: none;
 }
@@ -800,7 +801,8 @@ section { position: relative; }
   position: absolute;
   top: 60px; right: -1px;
   bottom: -1px; left: 60px;
-  border: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  border-right: 1px solid var(--border);
   z-index: 1;
   pointer-events: none;
 }
@@ -809,7 +811,7 @@ section { position: relative; }
   width: 100%;
   aspect-ratio: 4/5;
   object-fit: cover;
-  object-position: center center;
+  object-position: 65% center;
   display: block;
   filter: grayscale(20%);
 }
