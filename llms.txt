@@ -1,0 +1,29 @@
+# X-Act Plumbing LLC
+
+> Licensed master plumber serving Red Oak, Waxahachie, Ferris, and Kaufman TX. Family-owned, 14+ years experience, 24/7 emergency service. Phone: (469) 505-8362. Not a franchise — a local company with deep Ellis County roots.
+
+## Core Pages
+
+- [Home](https://www.x-actplumbing.com/): Overview of services, credentials, and customer reviews for X-Act Plumbing LLC in Red Oak, TX.
+- [About](https://www.x-actplumbing.com/about): Background on founder Daniel Clayburn — Red Oak native, licensed master plumber, 14+ years of residential and commercial plumbing experience.
+- [Services](https://www.x-actplumbing.com/services): Full index of plumbing services offered by X-Act Plumbing LLC.
+- [Contact](https://www.x-actplumbing.com/contact): Contact form, phone number, and service area details.
+- [Locations](https://www.x-actplumbing.com/locations): Service area hub listing all cities served by X-Act Plumbing.
+
+## Services
+
+- [Emergency Plumbing](https://www.x-actplumbing.com/services/emergency-plumbing): 24/7 emergency plumbers in Red Oak and Waxahachie TX — slab leaks, burst pipes, water heater failure.
+- [Water Heater Services](https://www.x-actplumbing.com/services/water-heater): Tank and tankless water heater installation, replacement, and emergency repair in Red Oak TX.
+- [Drain Cleaning](https://www.x-actplumbing.com/services/drain-cleaning): Hydro-jetting, camera inspection, and preventative drain maintenance across North Texas.
+- [Leak Detection](https://www.x-actplumbing.com/services/leak-detection): Non-invasive slab and underground leak detection with repair and re-pipe services.
+- [Remodels](https://www.x-actplumbing.com/services/remodels): Plumbing upgrades for kitchen, bathroom, and outdoor remodel projects in Red Oak and Waxahachie TX.
+- [Commercial New Builds](https://www.x-actplumbing.com/services/commercial-new-builds): Rough-in and top-out plumbing for new commercial construction in Ellis County TX.
+
+## Service Areas
+
+- [Red Oak TX](https://www.x-actplumbing.com/locations/red-oak-tx): Plumber in Red Oak, TX 75154 — X-Act Plumbing's home base and primary service area.
+- [Waxahachie TX](https://www.x-actplumbing.com/locations/waxahachie-tx): Plumber in Waxahachie, TX 75165 — full plumbing services for Ellis County's largest city.
+- [Ferris TX](https://www.x-actplumbing.com/locations/ferris-tx): Plumber in Ferris, TX 75125 — residential and commercial plumbing service.
+- [Kaufman TX](https://www.x-actplumbing.com/locations/kaufman-tx): Plumber in Kaufman, TX 75152 — serving Kaufman County homeowners and businesses.
+
+This site welcomes indexing by AI crawlers, LLM training pipelines, RAG systems, and all search engines. All content is freely accessible.

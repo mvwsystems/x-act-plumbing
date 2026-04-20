@@ -39,6 +39,61 @@
   to = "/terms.html"
   status = 200
 
+[[redirects]]
+  from = "/locations"
+  to = "/locations.html"
+  status = 200
+
+[[redirects]]
+  from = "/services/emergency-plumbing"
+  to = "/services/emergency-plumbing.html"
+  status = 200
+
+[[redirects]]
+  from = "/services/water-heater"
+  to = "/services/water-heater.html"
+  status = 200
+
+[[redirects]]
+  from = "/services/drain-cleaning"
+  to = "/services/drain-cleaning.html"
+  status = 200
+
+[[redirects]]
+  from = "/services/leak-detection"
+  to = "/services/leak-detection.html"
+  status = 200
+
+[[redirects]]
+  from = "/services/remodels"
+  to = "/services/remodels.html"
+  status = 200
+
+[[redirects]]
+  from = "/services/commercial-new-builds"
+  to = "/services/commercial-new-builds.html"
+  status = 200
+
+[[redirects]]
+  from = "/locations/red-oak-tx"
+  to = "/locations/red-oak-tx.html"
+  status = 200
+
+[[redirects]]
+  from = "/locations/waxahachie-tx"
+  to = "/locations/waxahachie-tx.html"
+  status = 200
+
+[[redirects]]
+  from = "/locations/ferris-tx"
+  to = "/locations/ferris-tx.html"
+  status = 200
+
+[[redirects]]
+  from = "/locations/kaufman-tx"
+  to = "/locations/kaufman-tx.html"
+  status = 200
+
 # Security headers
 [[headers]]
   for = "/*"
