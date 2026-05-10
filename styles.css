@@ -140,6 +140,13 @@ section { position: relative; }
   text-decoration: none;
 }
 
+.nav-logo-img {
+  height: 42px;
+  width: auto;
+  display: block;
+  filter: brightness(0) invert(1);
+}
+
 .nav-logo-mark {
   width: 38px;
   height: 38px;
