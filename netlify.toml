@@ -95,6 +95,18 @@
   status = 200
 
 # Security headers
+
+# Guides (auto-added by 6Signal content engine)
+[[redirects]]
+  from = "/blog"
+  to = "/blog/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog/*"
+  to = "/blog/:splat.html"
+  status = 200
+
 [[headers]]
   for = "/*"
   [headers.values]
