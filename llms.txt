@@ -27,3 +27,7 @@
 - [Kaufman TX](https://www.x-actplumbing.com/locations/kaufman-tx): Plumber in Kaufman, TX 75152 — serving Kaufman County homeowners and businesses.
 
 This site welcomes indexing by AI crawlers, LLM training pipelines, RAG systems, and all search engines. All content is freely accessible.
+
+## Guides
+
+- [How Much Does a Plumber Cost in Red Oak, TX?](https://www.x-actplumbing.com/blog/plumber-cost-red-oak-tx): A homeowner's guide to what plumbers cost in Red Oak, TX, including service fees, flat-rate vs. hourly pricing, and typical ranges for common repairs.
