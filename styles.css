@@ -2064,6 +2064,357 @@ body::before {
   pointer-events: none;
 }
 
+/* ============================================================
+   BLOG / GUIDE ARTICLES
+   Class-driven so every published post is styled automatically.
+   ============================================================ */
+
+:root { --article-w: 780px; }
+
+/* Reading-progress bar (injected by main.js on article pages) */
+.reading-progress {
+  position: fixed;
+  top: 0; left: 0;
+  height: 3px;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: linear-gradient(90deg, var(--red), #e0463f);
+  box-shadow: 0 0 12px var(--red-glow);
+  z-index: 1100;
+  will-change: transform;
+}
+
+/* ── Article hero ── */
+.page-hero > .breadcrumb,
+.page-hero > .display-title,
+.page-hero > .lead {
+  max-width: var(--article-w);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--white-dim);
+  margin-bottom: 1.25rem;
+}
+
+.breadcrumb a {
+  color: var(--red);
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.breadcrumb a::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; bottom: -2px;
+  height: 1px;
+  background: var(--red);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s var(--ease-out);
+}
+
+.breadcrumb a:hover { color: var(--white); }
+.breadcrumb a:hover::after { transform: scaleX(1); }
+.breadcrumb span { color: var(--white-dim); }
+
+.display-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 5vw, 4.25rem);
+  font-weight: 900;
+  line-height: 0.98;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: var(--white);
+  margin-bottom: 1.25rem;
+}
+
+.lead {
+  font-size: clamp(1.05rem, 2vw, 1.35rem);
+  line-height: 1.5;
+  color: var(--white-dim);
+  max-width: 62ch;
+}
+
+/* ── Article body panels ── */
+.dark-panel {
+  max-width: var(--article-w);
+  margin: 0 auto 1.5rem;
+  background: var(--dark-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem 2.5rem;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s var(--ease-out),
+              border-color 0.4s ease,
+              box-shadow 0.4s ease;
+}
+
+/* Left accent bar draws in on scroll-reveal / hover */
+.dark-panel::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; bottom: 0;
+  width: 3px;
+  background: linear-gradient(180deg, var(--red), transparent 85%);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.6s var(--ease-out);
+}
+
+.dark-panel.visible::before { transform: scaleY(1); }
+
+.dark-panel:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-red);
+  box-shadow: 0 18px 48px rgba(0,0,0,0.45);
+}
+
+.dark-panel:first-of-type {
+  border-color: var(--border-red);
+  background: linear-gradient(160deg, var(--dark-3), var(--dark-2) 60%);
+}
+
+.dark-panel h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+  font-weight: 800;
+  line-height: 1.05;
+  text-transform: uppercase;
+  letter-spacing: -0.005em;
+  color: var(--white);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+}
+
+/* Mono tick before each section heading */
+.dark-panel h2::before {
+  content: '';
+  flex: none;
+  width: 22px;
+  height: 3px;
+  transform: translateY(-0.35em);
+  background: var(--red);
+  transform-origin: left;
+  transition: width 0.4s var(--ease-out);
+}
+
+.dark-panel:hover h2::before { width: 40px; }
+
+.dark-panel p { margin-bottom: 1rem; color: rgba(246,246,246,0.82); }
+.dark-panel p:last-child { margin-bottom: 0; }
+.dark-panel strong { color: var(--white); font-weight: 600; }
+
+.dark-panel ul {
+  list-style: none;
+  margin: 0 0 0.5rem;
+  padding: 0;
+}
+
+.dark-panel li {
+  position: relative;
+  padding-left: 1.75rem;
+  margin-bottom: 0.85rem;
+  color: rgba(246,246,246,0.82);
+}
+
+.dark-panel li:last-child { margin-bottom: 0; }
+
+.dark-panel li::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0.6em;
+  width: 8px; height: 8px;
+  background: var(--red);
+  clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+  transition: transform 0.25s var(--ease-out);
+}
+
+.dark-panel li:hover::before { transform: rotate(90deg) scale(1.2); }
+
+/* Inline article links */
+.dark-panel a,
+.faq-item a {
+  color: var(--red);
+  font-weight: 600;
+  background-image: linear-gradient(var(--red), var(--red));
+  background-size: 0% 1px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  transition: background-size 0.3s var(--ease-out), color 0.2s ease;
+}
+
+.dark-panel a:hover,
+.faq-item a:hover {
+  color: #e0463f;
+  background-size: 100% 1px;
+}
+
+/* ── FAQ ── */
+.faq-section {
+  max-width: var(--article-w);
+  margin: 3.5rem auto 0;
+}
+
+.faq-section > h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3.2vw, 2.3rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--white);
+  margin-bottom: 1.5rem;
+}
+
+.faq-item {
+  background: var(--dark-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-bottom: 0.85rem;
+  overflow: hidden;
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.faq-item:hover { border-color: var(--border-red); }
+
+.faq-item h3 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  color: var(--white);
+  padding: 1.25rem 3rem 1.25rem 1.5rem;
+  margin: 0;
+  position: relative;
+}
+
+.faq-item p {
+  color: rgba(246,246,246,0.8);
+  padding: 0 1.5rem 1.35rem;
+  margin: 0;
+}
+
+/* Progressive-enhancement accordion — only collapses once JS marks it */
+.faq-section.faq-enhanced .faq-item h3 {
+  cursor: pointer;
+  user-select: none;
+}
+
+.faq-section.faq-enhanced .faq-item h3::after {
+  content: '';
+  position: absolute;
+  right: 1.5rem;
+  top: 50%;
+  width: 9px; height: 9px;
+  border-right: 2px solid var(--red);
+  border-bottom: 2px solid var(--red);
+  transform: translateY(-65%) rotate(45deg);
+  transition: transform 0.3s var(--ease-out);
+}
+
+.faq-section.faq-enhanced .faq-item.open h3::after {
+  transform: translateY(-35%) rotate(-135deg);
+}
+
+.faq-section.faq-enhanced .faq-item .faq-answer {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.38s var(--ease-out);
+}
+
+/* ── Article CTA ── */
+.cta-section:has(> h2) {
+  max-width: var(--article-w);
+  margin: 3.5rem auto 0;
+  padding: 2.75rem 2.5rem;
+  background:
+    repeating-linear-gradient(-45deg, rgba(255,255,255,0.015) 0 1px, transparent 1px 9px),
+    linear-gradient(160deg, var(--dark-3), var(--dark-2));
+  border: 1px solid var(--border-red);
+  border-radius: var(--radius-lg);
+  text-align: center;
+}
+
+.cta-section > h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 1;
+  color: var(--white);
+  margin-bottom: 0.85rem;
+}
+
+.cta-section:has(> h2) > p {
+  color: var(--white-dim);
+  max-width: 52ch;
+  margin: 0 auto 1.75rem;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.9rem 1.75rem;
+  margin: 0.35rem;
+  background: var(--red);
+  color: var(--black);
+  clip-path: polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%);
+  transition: transform 0.25s var(--ease-out), background 0.25s ease, box-shadow 0.25s ease;
+}
+
+.cta-button:hover {
+  background: #cc3330;
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 12px 40px var(--red-glow), 0 4px 12px rgba(0,0,0,0.4);
+}
+
+.cta-button.cta-secondary {
+  background: transparent;
+  color: var(--white);
+  border: 1px solid var(--border);
+}
+
+.cta-button.cta-secondary:hover {
+  background: transparent;
+  border-color: var(--red);
+  color: var(--red);
+  box-shadow: 0 8px 32px rgba(180,40,36,0.2);
+}
+
+/* Respect users who prefer less motion */
+@media (prefers-reduced-motion: reduce) {
+  .reading-progress { display: none; }
+  .dark-panel,
+  .dark-panel::before,
+  .dark-panel h2::before,
+  .cta-button,
+  .faq-item .faq-answer {
+    transition: none !important;
+  }
+  .dark-panel:hover { transform: none; }
+}
+
 /* ── Responsive ── */
 @media (max-width: 1024px) {
   .about-grid { grid-template-columns: 1fr; gap: 3rem; }
@@ -2096,6 +2447,12 @@ body::before {
   .cta-inner::after { display: none; }
 
   .page-hero-inner { grid-template-columns: 1fr; }
+
+  /* Blog articles */
+  .dark-panel { padding: 1.75rem 1.5rem; }
+  .cta-section:has(> h2) { padding: 2.25rem 1.5rem; }
+  .faq-item h3 { padding: 1.1rem 2.75rem 1.1rem 1.25rem; }
+  .faq-item p { padding: 0 1.25rem 1.2rem; }
 
   .trust-bar-inner { gap: 1.5rem; }
   .trust-divider { display: none; }

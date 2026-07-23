@@ -176,6 +176,115 @@ document.addEventListener('DOMContentLoaded', () => {
 
   loadRetell();
 
+  /* ── Blog / Guide article enhancements ── */
+  const article = document.querySelector('main .dark-panel, main .faq-section');
+  if (article) {
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // Reading-progress bar
+    if (!reduceMotion) {
+      const progress = document.createElement('div');
+      progress.className = 'reading-progress';
+      document.body.appendChild(progress);
+
+      const updateProgress = () => {
+        const doc = document.documentElement;
+        const scrollable = doc.scrollHeight - doc.clientHeight;
+        const ratio = scrollable > 0 ? window.scrollY / scrollable : 0;
+        progress.style.transform = `scaleX(${Math.min(ratio, 1)})`;
+      };
+      updateProgress();
+      window.addEventListener('scroll', updateProgress, { passive: true });
+      window.addEventListener('resize', updateProgress, { passive: true });
+    }
+
+    // Staggered scroll-reveal for article blocks (reuses the .reveal system)
+    const blocks = document.querySelectorAll(
+      'main .dark-panel, main .faq-section, main .cta-section'
+    );
+    if ('IntersectionObserver' in window && !reduceMotion) {
+      const blockObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            blockObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+
+      blocks.forEach((el, i) => {
+        el.classList.add('reveal');
+        el.classList.add('reveal-delay-' + ((i % 3) + 1));
+        blockObserver.observe(el);
+      });
+    } else {
+      blocks.forEach(el => el.classList.add('visible'));
+    }
+
+    // FAQ accordion (progressive enhancement — content stays in the DOM)
+    document.querySelectorAll('.faq-section').forEach(section => {
+      const items = section.querySelectorAll('.faq-item');
+      if (!items.length) return;
+      section.classList.add('faq-enhanced');
+
+      const setOpen = (item, wrap, heading, open, animate) => {
+        item.classList.toggle('open', open);
+        heading.setAttribute('aria-expanded', open ? 'true' : 'false');
+
+        if (!animate || reduceMotion) {
+          wrap.style.height = open ? 'auto' : '0px';
+          return;
+        }
+
+        if (open) {
+          wrap.style.height = wrap.scrollHeight + 'px';
+          wrap.addEventListener('transitionend', function done(e) {
+            if (e.propertyName === 'height') {
+              wrap.style.height = 'auto'; // let it reflow naturally once open
+              wrap.removeEventListener('transitionend', done);
+            }
+          });
+        } else {
+          // From auto → fixed px, then to 0 so the browser can animate it
+          wrap.style.height = wrap.scrollHeight + 'px';
+          requestAnimationFrame(() => { wrap.style.height = '0px'; });
+        }
+      };
+
+      items.forEach((item, index) => {
+        const heading = item.querySelector('h3');
+        const answer = item.querySelector('p');
+        if (!heading || !answer) return;
+
+        // Wrap the answer so its height can be animated
+        const wrap = document.createElement('div');
+        wrap.className = 'faq-answer';
+        answer.parentNode.insertBefore(wrap, answer);
+        wrap.appendChild(answer);
+
+        // Accessibility: expose the heading as a real toggle button
+        const answerId = 'faq-a-' + index;
+        wrap.id = answerId;
+        heading.setAttribute('role', 'button');
+        heading.setAttribute('tabindex', '0');
+        heading.setAttribute('aria-controls', answerId);
+
+        // First question open by default, the rest collapsed
+        setOpen(item, wrap, heading, index === 0, false);
+
+        const toggle = () => setOpen(item, wrap, heading, !item.classList.contains('open'), true);
+
+        heading.addEventListener('click', toggle);
+        heading.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            toggle();
+          }
+        });
+      });
+    });
+  }
+
   /* ── Smooth scroll for anchor links ── */
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', (e) => {
