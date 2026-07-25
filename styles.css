@@ -2071,6 +2071,9 @@ body::before {
 
 :root { --article-w: 780px; }
 
+/* Space between the article and the footer */
+main > .container:has(> .dark-panel) { padding-bottom: 6rem; }
+
 /* Reading-progress bar (injected by main.js on article pages) */
 .reading-progress {
   position: fixed;
