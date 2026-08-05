@@ -3,6 +3,13 @@
 [build]
   publish = "."
 
+# Canonical host: force www -> apex so every canonical is self-referencing.
+[[redirects]]
+  from = "https://www.x-actplumbing.com/*"
+  to = "https://x-actplumbing.com/:splat"
+  status = 301
+  force = true
+
 # Redirect clean URLs (optional, enables /about instead of /about.html)
 [[redirects]]
   from = "/home"
