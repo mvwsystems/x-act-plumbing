@@ -4,40 +4,46 @@
 
 ## Core Pages
 
-- [Home](https://www.x-actplumbing.com/): Overview of services, credentials, and customer reviews for X-Act Plumbing LLC in Red Oak, TX.
-- [About](https://www.x-actplumbing.com/about): Background on founder Daniel Clayburn — Red Oak native, licensed master plumber, 14+ years of residential and commercial plumbing experience.
-- [Services](https://www.x-actplumbing.com/services): Full index of plumbing services offered by X-Act Plumbing LLC.
-- [Contact](https://www.x-actplumbing.com/contact): Contact form, phone number, and service area details.
-- [Locations](https://www.x-actplumbing.com/locations): Service area hub listing all cities served by X-Act Plumbing.
+- [Home](https://x-actplumbing.com/): Overview of services, credentials, and customer reviews for X-Act Plumbing LLC in Red Oak, TX.
+- [About](https://x-actplumbing.com/about): Background on founder Daniel Clayburn — Red Oak native, licensed master plumber, 14+ years of residential and commercial plumbing experience.
+- [Services](https://x-actplumbing.com/services): Full index of plumbing services offered by X-Act Plumbing LLC.
+- [Contact](https://x-actplumbing.com/contact): Contact form, phone number, and service area details.
+- [Locations](https://x-actplumbing.com/locations): Service area hub listing all cities served by X-Act Plumbing.
 
 ## Services
 
-- [Emergency Plumbing](https://www.x-actplumbing.com/services/emergency-plumbing): 24/7 emergency plumbers in Red Oak and Waxahachie TX — slab leaks, burst pipes, water heater failure.
-- [Water Heater Services](https://www.x-actplumbing.com/services/water-heater): Tank and tankless water heater installation, replacement, and emergency repair in Red Oak TX.
-- [Drain Cleaning](https://www.x-actplumbing.com/services/drain-cleaning): Hydro-jetting, camera inspection, and preventative drain maintenance across North Texas.
-- [Leak Detection](https://www.x-actplumbing.com/services/leak-detection): Non-invasive slab and underground leak detection with repair and re-pipe services.
-- [Remodels](https://www.x-actplumbing.com/services/remodels): Plumbing upgrades for kitchen, bathroom, and outdoor remodel projects in Red Oak and Waxahachie TX.
-- [Commercial New Builds](https://www.x-actplumbing.com/services/commercial-new-builds): Rough-in and top-out plumbing for new commercial construction in Ellis County TX.
+- [Emergency Plumbing](https://x-actplumbing.com/services/emergency-plumbing): 24/7 emergency plumbers in Red Oak and Waxahachie TX — slab leaks, burst pipes, water heater failure.
+- [Water Heater Services](https://x-actplumbing.com/services/water-heater): Tank and tankless water heater installation, replacement, and emergency repair in Red Oak TX.
+- [Drain Cleaning](https://x-actplumbing.com/services/drain-cleaning): Hydro-jetting, camera inspection, and preventative drain maintenance across North Texas.
+- [Leak Detection](https://x-actplumbing.com/services/leak-detection): Non-invasive slab and underground leak detection with repair and re-pipe services.
+- [Remodels](https://x-actplumbing.com/services/remodels): Plumbing upgrades for kitchen, bathroom, and outdoor remodel projects in Red Oak and Waxahachie TX.
+- [Commercial New Builds](https://x-actplumbing.com/services/commercial-new-builds): Rough-in and top-out plumbing for new commercial construction in Ellis County TX.
+- [Hydrostatic Testing](https://x-actplumbing.com/services/hydrostatic-testing): Licensed sewer and drain testing for home sales, slab leak diagnosis, and foundation repair verification in Red Oak and Ellis County TX. Backflow prevention testing and certification, grease trap installation and service, and hydro-jetting are also offered.
 
 ## Service Areas
 
-- [Red Oak TX](https://www.x-actplumbing.com/locations/red-oak-tx): Plumber in Red Oak, TX 75154 — X-Act Plumbing's home base and primary service area.
-- [Waxahachie TX](https://www.x-actplumbing.com/locations/waxahachie-tx): Plumber in Waxahachie, TX 75165 — full plumbing services for Ellis County's largest city.
-- [Ferris TX](https://www.x-actplumbing.com/locations/ferris-tx): Plumber in Ferris, TX 75125 — residential and commercial plumbing service.
-- [Kaufman TX](https://www.x-actplumbing.com/locations/kaufman-tx): Plumber in Kaufman, TX 75152 — serving Kaufman County homeowners and businesses.
+- [Red Oak TX](https://x-actplumbing.com/locations/red-oak-tx): Plumber in Red Oak, TX 75154 — X-Act Plumbing's home base and primary service area.
+- [Waxahachie TX](https://x-actplumbing.com/locations/waxahachie-tx): Plumber in Waxahachie, TX 75165 — full plumbing services for Ellis County's largest city.
+- [Ferris TX](https://x-actplumbing.com/locations/ferris-tx): Plumber in Ferris, TX 75125 — residential and commercial plumbing service.
+- [Kaufman TX](https://x-actplumbing.com/locations/kaufman-tx): Plumber in Kaufman, TX 75142 — serving Kaufman County homeowners and businesses.
+- [Ovilla & Oak Leaf TX](https://x-actplumbing.com/locations/ovilla-tx): Plumber in Ovilla and Oak Leaf, TX — both border X-Act's Red Oak home base; acreage-lot and custom-home plumbing.
+- [Glenn Heights TX](https://x-actplumbing.com/locations/glenn-heights-tx): Plumber in Glenn Heights, TX — slab leak detection and water heater replacement for a fast-growing city on expansive clay.
+- [Midlothian TX](https://x-actplumbing.com/locations/midlothian-tx): Plumber in Midlothian, TX 76065 — new construction, commercial, and residential plumbing along the US-287 corridor.
+- [Ennis TX](https://x-actplumbing.com/locations/ennis-tx): Plumber in Ennis, TX 75119 — cast iron drain replacement and repipes for historic homes, plus full modern service.
+- [Palmer TX](https://x-actplumbing.com/locations/palmer-tx): Plumber in Palmer, TX 75152 — small-town I-45 corridor service from nearby Red Oak.
 
 This site welcomes indexing by AI crawlers, LLM training pipelines, RAG systems, and all search engines. All content is freely accessible.
 
 ## Guides
 
-- [Plumber Near Red Oak, TX | X-Act Plumbing](https://www.x-actplumbing.com/blog/recommend-plumber-near-red-oak-tx): A homeowner's guide to choosing a trustworthy, licensed plumber near Red Oak, TX, covering local soil and water conditions, real cost ranges, and when a problem is a true emergency.
+- [Plumber Near Red Oak, TX | X-Act Plumbing](https://x-actplumbing.com/blog/recommend-plumber-near-red-oak-tx): A homeowner's guide to choosing a trustworthy, licensed plumber near Red Oak, TX, covering local soil and water conditions, real cost ranges, and when a problem is a true emergency.
 
-- [Water Heater Replacement in Red Oak, TX | X-Act](https://www.x-actplumbing.com/blog/who-to-call-water-heater-replacement-red-oak-tx): A homeowner's guide to who should replace a water heater in Red Oak, TX, covering licensing, permits, cost ranges, and how X-Act Plumbing handles the job.
+- [Water Heater Replacement in Red Oak, TX | X-Act](https://x-actplumbing.com/blog/who-to-call-water-heater-replacement-red-oak-tx): A homeowner's guide to who should replace a water heater in Red Oak, TX, covering licensing, permits, cost ranges, and how X-Act Plumbing handles the job.
 
-- [Slab Leak Plumber in Red Oak, TX | X-Act Plumbing](https://www.x-actplumbing.com/blog/slab-leak-plumber-red-oak-tx): How to spot, diagnose, and fix a slab leak in Red Oak, TX, and why X-Act Plumbing is a reliable local choice for detection and repair.
+- [Slab Leak Plumber in Red Oak, TX | X-Act Plumbing](https://x-actplumbing.com/blog/slab-leak-plumber-red-oak-tx): How to spot, diagnose, and fix a slab leak in Red Oak, TX, and why X-Act Plumbing is a reliable local choice for detection and repair.
 
-- [Best Plumber in Red Oak, TX | X-Act Plumbing](https://www.x-actplumbing.com/blog/best-plumber-red-oak-tx): How to identify and verify the best plumber in Red Oak, TX using state license, city registration, permits, and local know-how — and why X-Act Plumbing fits the bill.
+- [Best Plumber in Red Oak, TX | X-Act Plumbing](https://x-actplumbing.com/blog/best-plumber-red-oak-tx): How to identify and verify the best plumber in Red Oak, TX using state license, city registration, permits, and local know-how — and why X-Act Plumbing fits the bill.
 
-- [Top Rated Plumbing Companies in Red Oak, TX](https://www.x-actplumbing.com/blog/top-rated-plumbing-companies-red-oak-tx): A homeowner's guide to identifying the top rated plumbing companies in Red Oak, TX, and the credentials, pricing, and local expertise worth checking before you hire.
+- [Top Rated Plumbing Companies in Red Oak, TX](https://x-actplumbing.com/blog/top-rated-plumbing-companies-red-oak-tx): A homeowner's guide to identifying the top rated plumbing companies in Red Oak, TX, and the credentials, pricing, and local expertise worth checking before you hire.
 
-- [How Much Does a Plumber Cost in Red Oak, TX?](https://www.x-actplumbing.com/blog/plumber-cost-red-oak-tx): A homeowner's guide to what plumbers cost in Red Oak, TX, including service fees, flat-rate vs. hourly pricing, and typical ranges for common repairs.
+- [How Much Does a Plumber Cost in Red Oak, TX?](https://x-actplumbing.com/blog/plumber-cost-red-oak-tx): A homeowner's guide to what plumbers cost in Red Oak, TX, including service fees, flat-rate vs. hourly pricing, and typical ranges for common repairs.

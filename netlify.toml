@@ -101,6 +101,36 @@
   to = "/locations/kaufman-tx.html"
   status = 200
 
+[[redirects]]
+  from = "/services/hydrostatic-testing"
+  to = "/services/hydrostatic-testing.html"
+  status = 200
+
+[[redirects]]
+  from = "/locations/ovilla-tx"
+  to = "/locations/ovilla-tx.html"
+  status = 200
+
+[[redirects]]
+  from = "/locations/glenn-heights-tx"
+  to = "/locations/glenn-heights-tx.html"
+  status = 200
+
+[[redirects]]
+  from = "/locations/midlothian-tx"
+  to = "/locations/midlothian-tx.html"
+  status = 200
+
+[[redirects]]
+  from = "/locations/ennis-tx"
+  to = "/locations/ennis-tx.html"
+  status = 200
+
+[[redirects]]
+  from = "/locations/palmer-tx"
+  to = "/locations/palmer-tx.html"
+  status = 200
+
 # Security headers
 
 # Guides (auto-added by 6Signal content engine)
